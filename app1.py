@@ -5,8 +5,8 @@ import streamlit as st
 # Load the trained model and tokenizer
 @st.cache_resource
 def load_model():
-    model = GPT2LMHeadModel.from_pretrained('./custom_model')
-    tokenizer = GPT2Tokenizer.from_pretrained('./custom_model')
+    model = GPT2LMHeadModel.from_pretrained('gpt2')
+    tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
     tokenizer.pad_token = tokenizer.eos_token  # Set padding token to the end of sequence token
     return model, tokenizer
 
